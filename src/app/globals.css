@@ -3,16 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
   }
 }
 
@@ -24,4 +20,28 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.placeholder-text::placeholder {
+  font-size: 15px;
+  color: #626F86
+}
+
+.placeholder-field::placeholder {
+  font-size: 30px;
+  color: #626F86
+}
+
+.border-div {
+  border: 0.1px solid #ffffff;
+  transition: border 0.3s;
+}
+
+.border-div:hover {
+  border: 0.1px solid #ded9d9;
+  border-radius: 5px;
+}
+
+.text-info {
+  color: #172B4D;
 }
