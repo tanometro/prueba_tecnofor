@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { AddProps, Todo } from './interfaces';
+import { AddProps, TodoInterface } from './interfaces';
 import { v4 as uuid } from 'uuid';
 import { useTask } from '@/context/TaskContext';
 
 const Add: React.FC<AddProps> = ({ placeholder }) => {
   const { addTodo } = useTask();
-  const [newTask, setNewTask] = useState<Todo>({
+  const [newTask, setNewTask] = useState<TodoInterface>({
     id: uuid(),
     name: '',
     done: false,

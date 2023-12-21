@@ -1,11 +1,11 @@
 import React from 'react';
 import { useTask } from '@/context/TaskContext';
-import { Todo } from '../interfaces';
+import { TodoInterface } from '../interfaces';
 
 function DeleteAll() {
 
     const {todos, deleteTodos} = useTask();
-    const doneIds = todos.filter((task: Todo) => task.done).map((task:Todo) => task.id);
+    const doneIds = todos.filter((task: TodoInterface) => task.done).map((task:TodoInterface) => task.id);
 
   return (
     <div>
