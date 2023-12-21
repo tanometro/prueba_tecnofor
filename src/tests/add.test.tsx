@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
-import Add from '@/components/add';
+import '@testing-library/jest-dom';
+import Add from '../components/add';
 
 describe('<Add />', () => {
   describe('Adds a task', () => {
