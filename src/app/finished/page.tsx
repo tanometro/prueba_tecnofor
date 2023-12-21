@@ -6,14 +6,13 @@ import TitleList from '@/components/titleList';
 import List from '@/components/list';
 import NoTodo from '@/components/noTodo';
 import { useTask } from '@/context/TaskContext';
-import { Todo } from '@/components/interfaces';
-import DeleteAll from '@/components/buttons/deleteAll';
+import { TodoInterface } from '@/components/interfaces';
 
 const Finalizadas = () => {
 
   const {todos} = useTask();
 
-  const finished = todos.filter((task: Todo) => task.done == true);
+  const finished = todos.filter((task: TodoInterface) => task.done == true);
 
   return (
     <div className="flex flex-col">

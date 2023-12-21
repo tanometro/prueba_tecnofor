@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ListPropsInterface, Todo } from './interfaces';
+import { ListPropsInterface, TodoInterface } from './interfaces';
 import { ImCheckboxUnchecked, ImCheckboxChecked } from 'react-icons/im';
 import { BsThreeDots } from 'react-icons/bs';
 import Modal from './modal';
@@ -21,7 +21,7 @@ const List = (props: ListPropsInterface) => {
   
     return (
       <div>
-        {todo.map((task: Todo) => (
+        {todo.map((task: TodoInterface) => (
           <div
             key={task.id}
             className='flex flex-row items-center relative hover:bg-gray-200 hover:cursor-pointer rounded pl-3'

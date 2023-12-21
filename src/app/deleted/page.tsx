@@ -3,7 +3,7 @@
 import React from 'react';
 import Navbar from '@/components/navbar';
 import TitleList from '@/components/titleList';
-import { Todo } from '@/components/interfaces';
+import { TodoInterface } from '@/components/interfaces';
 import NoTodo from '@/components/noTodo';
 import { useTask } from '@/context/TaskContext';
 
@@ -21,7 +21,7 @@ const DeletedList = ( ) => {
           {
             deleted.length == 0 ? <NoTodo text='No tenes ninguna tarea eliminada // ¡Volve por más!'/> 
               :
-            deleted.map((task: Todo) => (
+            deleted.map((task: TodoInterface) => (
               <div
                 key={task.id}
                 className='flex flex-row items-center relative hover:bg-gray-200 hover:cursor-pointer rounded pl-3'
