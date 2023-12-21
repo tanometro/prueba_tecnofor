@@ -1,36 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+¡Hola!
 
-## Getting Started
+Esta mini app, es una todo-app. Sirve para agregar tareas a un listado de tareas, marcarlas como realizadas y/ o eliminarlas.
+Está hecha con Next.js, TypeScript y Tailwind.
 
-First, run the development server:
+Consideraciones:
+Empecé la app usando los componentes que me brinda Atlassian (Form, Navigation, Field, PrimaryButton, etc) pero realmente me generaban muchos conflictos con cualquier librería que use, como Jest, entre otras. Ni hablar de la versión de React, que requiere de la versión 16 para atrás. Por lo que perdí 3 días avanzando, 2 días resolviendo conflictos y finalmente desistí, al fin y al cabo la prueba no es saber usar esos componentes :-D 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Así que desinstalé el kit de Atlassian e hice manualmente con Tailwind todo.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+No existe en el universo Atlassian algo igual con las mismas características, por lo que me inspiré en varios softs de ellos, usando la navbar estándar (al que le agregué componentes que no hacen nada para que se parezca al menos), y el todo-list me inspiré en una app similar proporcionada por la empresa (https://www.atlassian.com/software/confluence/templates/to-do-list), al que le agregué la vista de las tareas hechas y las eliminadas.
+Para las acciones, me inspiré en componentes Atlassian, como que no permita que se agregue una nueva tarea vacía simplemente evita el input. 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Finalmente ya con tiempo, agregué validaciones primero y pruebas sucesivamente.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+¡Saludos!
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

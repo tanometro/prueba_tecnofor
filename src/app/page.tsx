@@ -8,7 +8,7 @@ import List from '@/components/list';
 import MoreInfo from '@/components/moreInfo';
 import HideItems from '@/components/buttons/hideItems';
 import { useTask } from '@/context/TaskContext';
-import { Todo } from '@/components/interfaces';
+import { TodoInterface } from '@/components/interfaces';
 import { useState } from 'react';
 import DeleteAll from '@/components/buttons/deleteAll';
 
@@ -16,8 +16,7 @@ export default function Home() {
   const [view, setView] = useState(false);
   const {todos} = useTask();
 
-  const done = todos.filter((task: Todo) => task.done == true);
-  const notDone = todos.filter((task: Todo) => task.done == false);
+  const notDone = todos.filter((task: TodoInterface) => task.done == false);
 
   return (
     <div className="App">

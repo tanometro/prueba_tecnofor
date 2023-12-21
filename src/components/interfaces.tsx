@@ -2,7 +2,7 @@ export interface ButtonProps {
     children: React.ReactNode;
 }
 
-export interface Todo {
+export interface TodoInterface {
     id: string,
     name: string,
     done: boolean,
@@ -18,16 +18,16 @@ export interface TodoListInterface {
         name: string;
         done: boolean;
       }[];
-      setTodo: React.Dispatch<React.SetStateAction<Todo[]>>
+      setTodo: React.Dispatch<React.SetStateAction<TodoInterface[]>>
 }
 
 export interface ListPropsInterface {
-    todo: Todo[],
+    todo: TodoInterface[],
 }
 
 export interface TableListProps {
-    todo: Todo[];
-    setTodo: React.Dispatch<React.SetStateAction<Todo[]>>;
+    todo: TodoInterface[];
+    setTodo: React.Dispatch<React.SetStateAction<TodoInterface[]>>;
   }
 
 export interface TitleProps {
@@ -45,9 +45,9 @@ export interface ItemProps {
 }
 
 export interface TodosState {
-    allTodos: Todo[];
-    finishedTodos: Todo[];
-    deletedTodos: Todo[];
+    allTodos: TodoInterface[];
+    finishedTodos: TodoInterface[];
+    deletedTodos: TodoInterface[];
   }
 
 export interface ModalProps {
