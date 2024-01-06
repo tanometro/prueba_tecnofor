@@ -1,5 +1,5 @@
 import React from 'react';
-import { TitleProps } from './interfaces';
+import { TitleProps } from '../interfaces';
 
 const TitleList = (props: TitleProps) => {
 const {title, img, alt} = props;

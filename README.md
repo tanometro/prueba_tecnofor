@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ✅ Utiliza React y Typescript para construir la aplicación. 
 ✅ Deberá tener el look and feel de Atlassian. Puedes basarte en componentes de Atlaskit a tu elección para ello. 
 ✅ Utiliza CSS, puedes optar por CSS puro, SASS o cualquier biblioteca de tu elección, como Bootstrap o Tailwind 
@@ -11,21 +10,6 @@
 ✅ Filtrar tareas por completadas o no completadas 
 ✅ Borrar todas las tareas completadas a la vez.
 
-=======
-
-✅ Utiliza React y Typescript para construir la aplicación.
-✅Deberá tener el look and feel de Atlassian. Puedes basarte en componentes de Atlaskit a tu elección para ello.
-✅Utiliza CSS, puedes optar por CSS puro, SASS o cualquier biblioteca de tu elección, como Bootstrap o Tailwind
-✅Utiliza algún tipo de almacenamiento local para persistir las tareas. Puedes usar Local Storage.
-✅Agrega una validación básica para evitar que se puedan agregar tareas vacías.
-✅Implementa las siguientes funcionalidades:
-✅Agregar una nueva tarea
-✅Marcar una tarea como completada
-✅Eliminar una tarea
-✅Filtrar tareas por completadas o no completadas
-✅Borrar todas las tareas completadas a la vez.
- 
->>>>>>> 4754d6a3b63088d6632781e915372edb1f44837c
 ¡Hola!
 
 Esta mini app, es una todo-app. Sirve para agregar tareas a un listado de tareas, marcarlas como realizadas y/ o eliminarlas. Está hecha con Next.js, TypeScript y Tailwind.
@@ -38,8 +22,4 @@ No existe en el universo Atlassian algo igual con las mismas características, p
 
 Finalmente ya con tiempo, agregué validaciones primero y pruebas sucesivamente.
 
-<<<<<<< HEAD
 ¡Saludos!
-=======
-¡Saludos!
->>>>>>> 4754d6a3b63088d6632781e915372edb1f44837c

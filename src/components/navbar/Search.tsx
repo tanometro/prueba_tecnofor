@@ -1,6 +1,6 @@
 import { useTask } from '@/context/TaskContext';
 import React, { useState } from 'react';
-import { TodoInterface } from './interfaces';
+import { TodoInterface } from '../interfaces';
 
 function Search() {
   const { todos } = useTask();

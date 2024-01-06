@@ -1,10 +1,10 @@
 'use client';
 
 import React from 'react';
-import Navbar from '@/components/navbar';
-import TitleList from '@/components/titleList';
+import Navbar from '@/components/navbar/Navbar';
+import TitleList from '@/components/lists/TitleList';
 import { TodoInterface } from '@/components/interfaces';
-import NoTodo from '@/components/noTodo';
+import NoTodo from '@/components/NoTodo';
 import { useTask } from '@/context/TaskContext';
 
 const DeletedList = ( ) => {
@@ -19,7 +19,7 @@ const DeletedList = ( ) => {
           <div className="w-5/12 mt-24">
           <TitleList title="Tareas que eliminaste" img="/x.png" alt="deleted" />
           {
-            deleted.length == 0 ? <NoTodo text='No tenes ninguna tarea eliminada // ¡Volve por más!'/> 
+            deleted.length == 0 ? <NoTodo text='No tenes ninguna tarea eliminada // ¡Volve por más!'/>
               :
             deleted.map((task: TodoInterface) => (
               <div

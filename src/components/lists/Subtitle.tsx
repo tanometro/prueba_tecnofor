@@ -1,5 +1,5 @@
 import React from 'react';
-import { SubProps } from './interfaces';
+import { SubProps } from '../interfaces';
 
 function Subtitle(props: SubProps) {
     const {text} = props;
