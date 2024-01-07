@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ListPropsInterface, TodoInterface } from '../interfaces';
 import { ImCheckboxUnchecked, ImCheckboxChecked } from 'react-icons/im';
 import { BsThreeDots } from 'react-icons/bs';
-import Modal from '../Modal';
+import Modal from '../todos/Modal';
 import { useTask } from '@/context/TaskContext';
 
 const List = (props: ListPropsInterface) => {

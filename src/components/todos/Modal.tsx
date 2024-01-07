@@ -1,5 +1,5 @@
 import React from 'react';
-import { ModalProps } from './interfaces';
+import { ModalProps } from '../interfaces';
 import { useTask } from '@/context/TaskContext';
 
 function Modal(props: ModalProps) {

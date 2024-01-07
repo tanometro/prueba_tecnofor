@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { ImCheckboxUnchecked, ImCheckboxChecked } from 'react-icons/im';
 import { BsThreeDots } from 'react-icons/bs';
-import Modal from '../Modal';
+import Modal from './Modal';
 import { useTask } from '@/context/TaskContext';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
