@@ -1,23 +1,23 @@
 'use client';
 
 import React, {useState } from 'react';
-import Add from '@/components/Add';
 import TitleList from '@/components/lists/TitleList';
 import Subtitle from '@/components/lists/Subtitle';
 import List from '@/components/lists/List';
 import MoreInfo from '@/components/lists/MoreInfo';
-import HideItems from '@/components/buttons/HideItems';
 import { useTask } from '@/context/TaskContext';
 import { TodoInterface } from '@/components/interfaces';
-import DeleteAll from '@/components/buttons/DeleteAll';
 import Navbar from '@/components/navbar/Navbar';
+import Add from '@/components/Add';
+import HideItems from '@/components/buttons/HideItems';
+import DeleteAll from '@/components/buttons/DeleteAll';
 
 export default function Home() {
   const [view, setView] = useState(false);
   const {todos, setTodos} = useTask();
 
   const notDone = todos.filter((task: TodoInterface) => task.done == false);
-
+  
   return (
     <div className="App">
       <Navbar/>
@@ -31,13 +31,13 @@ export default function Home() {
                 <div className='ml-auto'>
                   {
                   view == false ? 
-                    <HideItems  view={view} setView={setView} title='Hide checked items'/> 
+                    <HideItems view={view} setView={setView} title='Hide checked items'/>
                     : 
                     <HideItems  view={view} setView={setView} title='Show checked items'/>
                   }
                 </div>
                 <div>
-                  <DeleteAll />
+                  <DeleteAll/>
                 </div>  
               </div>
               <div className='w-full'>
