@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { AddProps, TodoInterface } from './interfaces';
+import { AddProps, TodoInterface } from '../interfaces';
 import { v4 as uuid } from 'uuid';
 import { useTask } from '@/context/TaskContext';
-import addValidations from './validations/addValidations';
+import addValidations from '../validations/addValidations';
 
 const Add: React.FC<AddProps> = ({ placeholder }) => {
   const { addTodo } = useTask();

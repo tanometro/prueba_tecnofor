@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Add from '../components/Add';
+import Add from '../components/todos/Add';
 
 describe('<Add />', () => {
   describe('Adds a task', () => {
