@@ -28,7 +28,7 @@ export interface TodoListInterface {
 
 export interface ListPropsInterface {
     todo: TodoInterface[],
-    setTodos: React.Dispatch<React.SetStateAction<TodoInterface[]>>;
+    setTodos?: React.Dispatch<React.SetStateAction<TodoInterface[]>>;
 }
 
 export interface TableListProps {

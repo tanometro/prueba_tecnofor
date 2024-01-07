@@ -6,9 +6,9 @@ import Modal from '../Modal';
 import { useTask } from '@/context/TaskContext';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import { TodoInterface } from '../interfaces';
+import { TodoProps } from '../interfaces';
 
-const Todo = ({ task }: TodoInterface) => {
+const Todo = ({ task }: TodoProps) => {
   const { taskDone } = useTask();
   const [hoveredTask, setHoveredTask] = useState<string | null>(null);
   const [modalTaskId, setModalTaskId] = useState<string | null>(null);

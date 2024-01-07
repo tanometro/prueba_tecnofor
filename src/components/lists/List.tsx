@@ -4,17 +4,12 @@ import { ImCheckboxUnchecked, ImCheckboxChecked } from 'react-icons/im';
 import { BsThreeDots } from 'react-icons/bs';
 import Modal from '../Modal';
 import { useTask } from '@/context/TaskContext';
-import {DndContext, closestCenter} from '@dnd-kit/core';
-import {SortableContext, verticalListSortingStrategy, useSortable, arrayMove} from '@dnd-kit/sortable';
-import { CSS } from '@dnd-kit/utilities';
-import Todo from '../todos/Todo';
 
 const List = (props: ListPropsInterface) => {
     const { todo, setTodos } = props;
     const { taskDone } = useTask();
     const [hoveredTask, setHoveredTask] = useState<string | null>(null);
     const [modalTaskId, setModalTaskId] = useState<string | null>(null);
-    const {attributes, listeners, setNodeRef, transform, transition} = useSortable({id: todo.id});
   
     const setModal = (taskId: string) => {
       setModalTaskId(taskId);
@@ -24,33 +19,9 @@ const List = (props: ListPropsInterface) => {
       setModalTaskId(null);
     };
 
-    const handleDragEnd = (event) => {
-      const { active, over } = event;
-  
-      if (!active.id !== over.id) {
-        setTodos((todo) => {
-          const oldIndex = todo.findIndex((todo: TodoInterface) => todo.id === active.id);
-          const newIndex = todo.findIndex((todo: TodoInterface) => todo.id === over.id);
-  
-          return arrayMove(todo, oldIndex, newIndex);
-        });
-      }
-    };
-
-    const style = {
-        transform: CSS.Transform.toString(transform),
-        transition
-    }
   
     return (
-    <DndContext
-      collisionDetection={closestCenter}
-      onDragEnd={handleDragEnd}
-      >
-        <SortableContext
-            items={todo}
-            strategy={verticalListSortingStrategy}
-        >
+    <div>
             {todo.map((task: TodoInterface) => (
                 // <Todo key={task.id}
                 // id={task.id}
@@ -62,10 +33,6 @@ const List = (props: ListPropsInterface) => {
                     className='flex flex-row items-center relative hover:bg-gray-200 hover:cursor-pointer rounded pl-3'
                     onMouseEnter={() => setHoveredTask(task.id)}
                     onMouseLeave={() => setHoveredTask(null)}
-                    ref={setNodeRef}
-                    {...attributes}
-                    {...listeners}
-                    style={style}
                 >
                     <div className='mr-2' onClick={() => taskDone(task.id)}>
                         {task.done ? (
@@ -95,8 +62,7 @@ const List = (props: ListPropsInterface) => {
                         )}
                 </div>
             ))}
-        </SortableContext>
-    </DndContext>
+    </div>
     );
   };  
 

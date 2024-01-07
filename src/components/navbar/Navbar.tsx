@@ -1,5 +1,5 @@
 import React, {useState, useRef} from 'react';
-import Search from './search';
+import Search from './Search';
 import Image from 'next/image';
 import Link from 'next/link';
 
