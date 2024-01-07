@@ -14,7 +14,7 @@ import Navbar from '@/components/navbar/Navbar';
 
 export default function Home() {
   const [view, setView] = useState(false);
-  const {todos} = useTask();
+  const {todos, setTodos} = useTask();
 
   const notDone = todos.filter((task: TodoInterface) => task.done == false);
 
@@ -46,9 +46,9 @@ export default function Home() {
             <div className='w-full mb-10'>
               {
               view == false ? 
-                <List todo={todos}/> 
+                <List todo={todos} setTodos={setTodos} /> 
                 : 
-                <List todo={notDone}/>
+                <List todo={notDone} setTodos={setTodos}/>
               }
             </div>
           <div>

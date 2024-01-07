@@ -58,6 +58,7 @@ export const TaskProvider = ({children}) => {
 
     return <TaskContext.Provider value={{
         todos,
+        setTodos,
         addTodo,
         taskDone,
         deleted,

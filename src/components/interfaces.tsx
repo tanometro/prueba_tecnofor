@@ -12,6 +12,11 @@ export interface AddProps {
     placeholder: string,
   }
 
+export interface TodoProps {
+    task: TodoInterface,
+    
+}
+
 export interface TodoListInterface {
     todo: {
         id: string;
@@ -23,6 +28,7 @@ export interface TodoListInterface {
 
 export interface ListPropsInterface {
     todo: TodoInterface[],
+    setTodos: React.Dispatch<React.SetStateAction<TodoInterface[]>>;
 }
 
 export interface TableListProps {
@@ -64,3 +70,12 @@ export interface HideProps {
     setView: React.Dispatch<React.SetStateAction<boolean>>;
     title: string
 }
+
+export interface DragEndEvent {
+    active: {
+      id: string; 
+    };
+    over?: {
+      id: string; 
+    };
+  }
