@@ -8,7 +8,7 @@ import MoreInfo from '@/components/lists/MoreInfo';
 import { useTask } from '@/context/TaskContext';
 import { TodoInterface } from '@/components/interfaces';
 import Navbar from '@/components/navbar/Navbar';
-import Add from '../components/Add';
+import Add from '@/components/Add';
 import DeleteAll from '../components/buttons/DeleteAll';
 import HideItems from '../components/buttons/HideItems';
 

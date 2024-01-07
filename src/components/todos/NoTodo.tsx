@@ -1,5 +1,5 @@
 import React from 'react';
-import { NoTodoProps } from './interfaces';
+import { NoTodoProps } from '../interfaces';
 
 function NoTodo(props: NoTodoProps) {
   const {text} = props;
