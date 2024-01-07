@@ -5,12 +5,10 @@ import Navbar from '@/components/navbar/Navbar';
 import TitleList from '@/components/lists/TitleList';
 import { TodoInterface } from '@/components/interfaces';
 import { useTask } from '@/context/TaskContext';
-import NoTodo from '@/components/NoTodo';
+import NoTodo from '../../components/NoTodo';
 
 const DeletedList = ( ) => {
-
   const {deleted} = useTask();
-
 
   return (
     <div>

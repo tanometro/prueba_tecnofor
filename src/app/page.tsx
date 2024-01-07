@@ -8,9 +8,9 @@ import MoreInfo from '@/components/lists/MoreInfo';
 import { useTask } from '@/context/TaskContext';
 import { TodoInterface } from '@/components/interfaces';
 import Navbar from '@/components/navbar/Navbar';
-import Add from '@/components/Add';
-import HideItems from '@/components/buttons/HideItems';
-import DeleteAll from '@/components/buttons/DeleteAll';
+import Add from '../components/Add';
+import DeleteAll from '../components/buttons/DeleteAll';
+import HideItems from '../components/buttons/HideItems';
 
 export default function Home() {
   const [view, setView] = useState(false);

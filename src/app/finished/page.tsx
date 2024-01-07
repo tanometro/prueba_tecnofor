@@ -6,7 +6,7 @@ import TitleList from '@/components/lists/TitleList';
 import List from '@/components/lists/List';
 import { useTask } from '@/context/TaskContext';
 import { TodoInterface } from '@/components/interfaces';
-import NoTodo from '@/components/NoTodo';
+import NoTodo from '../../components/NoTodo';
 
 const Finalizadas = () => {
 
